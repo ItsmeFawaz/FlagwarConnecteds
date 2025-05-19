@@ -1,0 +1,20 @@
+name: $name
+version: $version
+main: xyz.marroq.flagwarconnecteds.FlagwarConnecteds
+api-version: '1.20'
+folia-supported: true
+authors: [ ewof ]
+description: $description
+website: marroq.xyz
+dependencies:
+  server:
+    Towny:
+      load: BEFORE
+      required: true
+    FlagWar:
+      load: BEFORE
+      required: true
+permissions:
+  flagwarconnecteds.reload:
+    description: "Allows use of the reload command"
+    default: op

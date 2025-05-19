@@ -1,0 +1,17 @@
+# If this is false the plugin won't do anything
+enabled: true
+
+# Does capturing the home chunk of a town give you the connected chunks?
+capture_homeblock_transfers_connected_chunks: true
+
+# Does capturing an outpost chunk transfer all chunks connected to that outpost chunk?
+capture_outpost_transfers_connected_chunks: true
+
+# Does capturing the home chunk of a town give you all its chunks? (Including non connected outposts)
+capture_homeblock_transfers_all_chunks: false
+
+# Does capturing the home chunk of a nation capital put all other towns in your nation?
+capture_capital_homeblock_transfers_other_towns: false
+
+# Does capturing the home chunk of a nation capital disband that nation?
+capture_capital_homeblock_disbands_nation: false
