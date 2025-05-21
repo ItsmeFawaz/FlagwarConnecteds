@@ -14,6 +14,9 @@ dependencies:
     FlagWar:
       load: BEFORE
       required: true
+    TownySpacePorts:
+      load: OMIT
+      required: true
 permissions:
   flagwarconnecteds.reload:
     description: "Allows use of the reload command"

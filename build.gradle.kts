@@ -27,6 +27,7 @@ dependencies {
     implementation("co.aikar:acf-paper:0.5.1-SNAPSHOT")
     compileOnly("com.github.TownyAdvanced:FlagWar:0.6.4")
     compileOnly("com.github.TownyAdvanced.Towny:towny:0.101.1.9")
+    compileOnly("dev.glowie:townyspaceports:0.1")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.11.0")
     testImplementation("com.github.seeseemelk:MockBukkit-v1.21:3.107.0")

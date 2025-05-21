@@ -5,6 +5,7 @@ import com.palmergames.bukkit.towny.TownyAPI;
 import com.palmergames.bukkit.towny.event.DeleteNationEvent;
 import com.palmergames.bukkit.towny.exceptions.AlreadyRegisteredException;
 import com.palmergames.bukkit.towny.object.*;
+import dev.glowie.townySpacePorts.utils.SpaceUtils;
 import io.github.townyadvanced.flagwar.events.CellAttackEvent;
 import io.github.townyadvanced.flagwar.events.CellWonEvent;
 import io.github.townyadvanced.flagwar.objects.CellUnderAttack;
@@ -111,6 +112,8 @@ public final class FlagwarConnecteds extends JavaPlugin implements Listener {
         tbList.forEach((tb) -> {
             tb.setTown(transferTo);
             tb.save();
+            if(Bukkit.getPluginManager().isPluginEnabled("TownySpacePorts"))
+                SpaceUtils.transferOtherPorts(tb, transferTo);
         });
 
         centerBlock.setTown(transferTo);
@@ -180,7 +183,7 @@ public final class FlagwarConnecteds extends JavaPlugin implements Listener {
                     } catch (AlreadyRegisteredException e) {
                         throw new RuntimeException(e);
                     }
-            townyAPI.getDataSource().removeNation(defendingNation, DeleteNationEvent.Cause.ADMIN_COMMAND);
+            townyAPI.getDataSource().removeNation(defendingNation, DeleteNationEvent.Cause.ADMIN_COMMAND, Bukkit.getServer().getConsoleSender());
         }
 
     }
